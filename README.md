@@ -18,7 +18,7 @@
 <details><summary>文字版介绍与作品索引</summary>
 <p>我是 <strong>Star</strong>，以个人项目品牌 <strong>Axis</strong> 持续构建可核验的 AI Agent 系统、开发工具链与 WebGL 视觉作品。</p>
 <ul>
-<li><a href="https://github.com/startuo/Axis-EVO">Axis-EVO</a>：本地优先的可核验 AI Agent 工作台，具备不可变 Skill 版本链、SHA-256 产物核验、无网络 Linux Docker 沙箱、保守 UNKNOWN 停机栅栏与黑曜棱镜双主题工作台。</li>
+<li><a href="https://github.com/startuo/Axis-EVO">Axis-EVO（M9）</a>：本地优先的可核验 AI Agent 工作台，具备任务验收契约、语义停滞拦截、零历史独立只读验证器（Fresh Verifier）、不可变 Skill 版本链、无网络 Linux Docker 沙箱与保守 UNKNOWN 停机栅栏。</li>
 <li><a href="https://axisguanwang-gjs9q0158.maozi.io/">Lexis Axis NEX（私人项目 / 官网）</a>：面向 Lexis Menu（GTA V Enhanced）的免费模块化 Lua 菜单引擎，采用五文件按页懒加载、内置原生兼容垫片与液态玻璃界面。</li>
 <li><a href="https://axis-10d38158.maozi.io/">AXIS-STAR Visual Space（在线 3D 艺术空间）</a>：从古典雕塑到宇宙星辰的五幕一镜到底 3D 互动个人视觉中转站，基于 Three.js、WebGL2、GLSL 与 Lenis，零外部运行时请求、165 FPS 渲染。</li>
 <li><a href="https://axis.1669338073.workers.dev/">Axis Personal Blog</a>（源码：<a href="https://github.com/startuo/Axis">startuo/Axis</a>）：基于 Astro 与 Cloudflare Workers D1 构建的双站博客，记录 Agent、Harness 工程与独立开发实践。</li>

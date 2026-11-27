@@ -83,8 +83,8 @@
 
     <!-- 左侧叙事区 -->
     <text class="serif" x="48" y="88" font-size="52" fill="none" stroke="#dbb368" stroke-width="1.1" opacity="0.86">01</text>
-    <rect x="114" y="54" width="154" height="24" rx="3" fill="rgba(219, 179, 104, 0.16)" stroke="#dbb368" stroke-width="0.9"/>
-    <text class="mono" x="191" y="70" text-anchor="middle" font-size="12" letter-spacing="1.4" fill="#e8c780">FLAGSHIP  /  M8.6</text>
+    <rect x="114" y="54" width="144" height="24" rx="3" fill="rgba(219, 179, 104, 0.16)" stroke="#dbb368" stroke-width="0.9"/>
+    <text class="mono" x="186" y="70" text-anchor="middle" font-size="12" letter-spacing="1.4" fill="#e8c780">FLAGSHIP  /  M9</text>
     <text class="mono" x="536" y="70" text-anchor="end" font-size="12" letter-spacing="1.6" fill="#998f81">AGENT WORKBENCH</text>
 
     <text class="serif" x="48" y="142" font-size="44" letter-spacing="1.2" fill="#f2ece1">Axis-EVO</text>
@@ -95,13 +95,13 @@
     <!-- 三条核心硬实力 -->
     <g>
       <path d="M 54 232 L 58 227 L 62 232 L 58 237 Z" fill="#dbb368"/>
-      <text class="sans" x="74" y="237" font-size="14.5" fill="#f2ece1">不可变 Skill 版本链、SHA-256 核验与保守 UNKNOWN 停机栅栏</text>
+      <text class="sans" x="74" y="237" font-size="14.5" fill="#f2ece1">任务契约、语义停滞拦截与零历史独立只读验证器（Fresh Verifier）</text>
 
       <path d="M 54 274 L 58 269 L 62 274 L 58 279 Z" fill="#92a6cc"/>
-      <text class="sans" x="74" y="279" font-size="14.5" fill="#f2ece1">无网络 Linux Docker 沙箱、显式审批边界与 100% 离线前缀稳定</text>
+      <text class="sans" x="74" y="279" font-size="14.5" fill="#f2ece1">不可变 Skill 版本链、无网络 Linux Docker 沙箱与保守 UNKNOWN 栅栏</text>
 
       <path d="M 54 316 L 58 311 L 62 316 L 58 321 Z" fill="#e0a16c"/>
-      <text class="sans" x="74" y="321" font-size="14.5" fill="#f2ece1">Work-First 三栏界面、黑曜棱镜双主题与办公文档即时预览</text>
+      <text class="sans" x="74" y="321" font-size="14.5" fill="#f2ece1">Work-First 三栏工作台、黑曜棱镜双主题与 100% 离线前缀稳定</text>
     </g>
 
     <line x1="48" y1="356" x2="536" y2="356" stroke="#252019" stroke-width="0.9"/>
