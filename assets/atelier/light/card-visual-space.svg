@@ -103,7 +103,7 @@
     <rect x="30" y="29" width="90" height="22" rx="2" fill="#faf6ef" fill-opacity="0.92" stroke="#cfbe9f" stroke-width="0.9"/>
     <text class="mono" x="75" y="44" text-anchor="middle" font-size="12" letter-spacing="1.2" fill="#7e531b">PLATE 03</text>
     <rect x="424" y="29" width="106" height="22" rx="2" fill="#faf6ef" fill-opacity="0.92" stroke="#e2d7c4" stroke-width="0.9"/>
-           <text class="mono" x="477" y="44" text-anchor="middle" font-size="12" letter-spacing="1.0" fill="#4a4035">PRIVATE 3D</text>
+           <text class="mono" x="477" y="44" text-anchor="middle" font-size="12" letter-spacing="1.0" fill="#4a4035">LIVE 3D</text>
 
     <!-- 标题与右上箭头 -->
     <text class="serif" x="22" y="216" font-size="29" letter-spacing="0.6" fill="#1b1611">AXIS-STAR Visual Space</text>
@@ -124,7 +124,7 @@
         <rect x="195" y="310" width="55" height="24" rx="3" fill="#efe8db" stroke="#d8cab2" stroke-width="0.9"/>
         <text class="mono" x="222.5" y="326" text-anchor="middle" font-size="12" letter-spacing="0.8" fill="#3b3227">GLSL</text>
       </g>
-    <text class="mono" x="538" y="326" text-anchor="end" font-size="12" letter-spacing="1.2" fill="#966828">VISUAL PORTAL ↗</text>
+    <text class="mono" x="538" y="326" text-anchor="end" font-size="12" letter-spacing="1.2" fill="#966828">VISIT LIVE ↗</text>
   </g>
   <rect x="6.5" y="6.5" width="547" height="347" rx="8" fill="none" stroke="#cfbe9f" stroke-width="1.1"/>
 </svg>

@@ -100,7 +100,7 @@
     <text class="sans" x="676" y="128" font-size="14.5" fill="#c9bca8">欢迎交流 LLM Agent 工程、Skill 演化、视觉动效与开源合作</text>
 
     <rect x="676" y="156" width="332" height="40" rx="4" fill="rgba(219, 179, 104, 0.16)" stroke="#dbb368" stroke-width="1.1"/>
-    <text class="mono" x="842" y="181" text-anchor="middle" font-size="13.5" letter-spacing="0.8" fill="#e8c780">axis.1669338073.workers.dev  ↗</text>
+    <text class="mono" x="842" y="181" text-anchor="middle" font-size="13.5" letter-spacing="0.8" fill="#e8c780">axis-10d38158.maozi.io  ↗</text>
 
     <!-- 右下角鎏金印章（轴星 / STAR） -->
     <g transform="translate(1088, 138)">
