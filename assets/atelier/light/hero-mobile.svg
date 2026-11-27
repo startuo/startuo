@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-labelledby="axisBannerTitle axisBannerDesc">
-  <title id="axisBannerTitle">AXIS — Star | From Classical Form to Cosmic Execution</title>
-  <desc id="axisBannerDesc">Dark Florentine classical humanism transitioning into deep cosmic starfield, featuring the Axis emblem and Star signature.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460" role="img" aria-labelledby="t">
+  <title id="t">AXIS — Star | From Classical Form to Cosmic Execution</title>
   <defs>
     <style>
       @font-face {
@@ -29,417 +27,112 @@
         font-weight: 400;
         font-style: normal;
       }
-
-      .font-serif { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; }
-      .font-cjk { font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif; }
-      .font-mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-
-      .spin-cw {
-        animation: astrolabeCW 76s linear infinite;
-        transform-origin: 0px 0px;
-      }
-      .spin-ccw {
-        animation: astrolabeCCW 58s linear infinite;
-        transform-origin: 0px 0px;
-      }
-      .emblem-drift {
-        animation: emblemDrift 9s ease-in-out infinite;
-      }
-      .eclipse-core {
-        animation: eclipsePulse 6.4s ease-in-out infinite;
-        transform-origin: 0px -11.76px;
-      }
-      .twinkle-a { animation: starPulseA 5.2s ease-in-out infinite; }
-      .twinkle-b { animation: starPulseB 6.8s ease-in-out 1.4s infinite; }
-      .twinkle-c { animation: starPulseC 8.4s ease-in-out 2.7s infinite; }
-      .hero-star { animation: heroPulse 5.6s ease-in-out infinite; }
-      .meridian-glint { animation: meridianSweep 11s ease-in-out infinite; }
-
-      @keyframes astrolabeCW {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      @keyframes astrolabeCCW {
-        from { transform: rotate(360deg); }
-        to { transform: rotate(0deg); }
-      }
-      @keyframes emblemDrift {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-2.4px); }
-      }
-      @keyframes eclipsePulse {
-        0%, 100% { opacity: 0.72; transform: scale(0.95); }
-        50% { opacity: 1; transform: scale(1.07); }
-      }
-      @keyframes starPulseA {
-        0%, 100% { opacity: 0.34; }
-        50% { opacity: 0.88; }
-      }
-      @keyframes starPulseB {
-        0%, 100% { opacity: 0.42; }
-        50% { opacity: 0.94; }
-      }
-      @keyframes starPulseC {
-        0%, 100% { opacity: 0.28; }
-        50% { opacity: 0.76; }
-      }
-      @keyframes heroPulse {
-        0%, 100% { opacity: 0.78; }
-        50% { opacity: 1; }
-      }
-      @keyframes meridianSweep {
+      .serif { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .cjk-hero { font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif; }
+      .sans { font-family: 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', 'Segoe UI', sans-serif; }
+  
+      .spin-cw { animation: spinCW 72s linear infinite; transform-origin: 0px 0px; }
+      .spin-ccw { animation: spinCCW 54s linear infinite; transform-origin: 0px 0px; }
+      .drift { animation: driftY 8.5s ease-in-out infinite; }
+      .pulse { animation: pulseOp 4.4s ease-in-out infinite; }
+      .pulse-slow { animation: pulseOp 6.4s ease-in-out 1.2s infinite; }
+      .scan-y { animation: scanY 5.4s ease-in-out infinite; }
+      .flow-x { stroke-dasharray: 6 7; animation: flowX 3.8s linear infinite; }
+      .glint { animation: glintX 11s ease-in-out infinite; }
+      @keyframes spinCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes spinCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+      @keyframes driftY { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-2.2px); } }
+      @keyframes pulseOp { 0%, 100% { opacity: 0.48; } 50% { opacity: 1; } }
+      @keyframes scanY { 0%, 100% { transform: translateY(0px); opacity: 0.45; } 50% { transform: translateY(62px); opacity: 0.92; } }
+      @keyframes flowX { to { stroke-dashoffset: -26; } }
+      @keyframes glintX {
         0% { transform: translateX(-140px); opacity: 0; }
         16% { opacity: 0.85; }
         62% { opacity: 0.72; }
         84% { opacity: 0; }
         100% { transform: translateX(580px); opacity: 0; }
       }
-
       @media (prefers-reduced-motion: reduce) {
-        .spin-cw, .spin-ccw, .emblem-drift, .eclipse-core,
-        .twinkle-a, .twinkle-b, .twinkle-c, .hero-star, .meridian-glint {
-          animation: none !important;
-        }
+        *, *::before, *::after { animation: none !important; }
       }
-    </style>
-
-    <clipPath id="plateClip">
-      <rect x="8" y="8" width="1184" height="324" rx="10" />
-    </clipPath>
-    <clipPath id="axisRuleClip">
-      <rect x="62" y="167" width="564" height="6" />
-    </clipPath>
-
-    <!-- 从暗调佛罗伦萨古典暖殿到深空黑曜石星海的连续过渡 -->
-    <linearGradient id="canvasGrad" x1="0%" y1="15%" x2="100%" y2="85%">
-      <stop offset="0%" stop-color="#18120c" />
-      <stop offset="52%" stop-color="#100f13" />
-      <stop offset="100%" stop-color="#080b12" />
+</style>
+    
+    <clipPath id="hm0-clip"><rect x="6" y="6" width="628" height="448" rx="8"/></clipPath>
+    <linearGradient id="hm0-bg" x1="0%" y1="10%" x2="100%" y2="90%">
+      <stop offset="0%" stop-color="#f7f1e6"/>
+      <stop offset="52%" stop-color="#f5f2ec"/>
+      <stop offset="100%" stop-color="#eef2f8"/>
     </linearGradient>
-
-    <!-- 卡拉瓦乔古典侧逆暖光 -->
-    <radialGradient id="classicalWarmGlow" cx="24%" cy="32%" r="48%">
-      <stop offset="0%" stop-color="#dbb368" stop-opacity="0.13" />
-      <stop offset="65%" stop-color="#dbb368" stop-opacity="0.03" />
-      <stop offset="100%" stop-color="#dbb368" stop-opacity="0" />
+    <pattern id="hm0-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.9" fill="rgba(27, 22, 17, 0.065)"/>
+    </pattern>
+    <linearGradient id="hm0-arc" x1="12%" y1="8%" x2="88%" y2="92%">
+      <stop offset="0%" stop-color="#d88f55"/>
+      <stop offset="52%" stop-color="#ba733c"/>
+      <stop offset="100%" stop-color="#874c22"/>
+    </linearGradient>
+    <radialGradient id="hm0-spark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff9ea" stop-opacity="0.96"/>
+      <stop offset="30%" stop-color="#d59a42" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d59a42" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- 中心日蚀微晕 -->
-    <radialGradient id="emblemHalo" cx="69.2%" cy="50%" r="28%">
-      <stop offset="0%" stop-color="#dbb368" stop-opacity="0.18" />
-      <stop offset="48%" stop-color="#7b93c9" stop-opacity="0.11" />
-      <stop offset="100%" stop-color="#080b12" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Axis 圣环倒角金属渐变 -->
-    <linearGradient id="arcMetalGrad" x1="12%" y1="8%" x2="88%" y2="92%">
-      <stop offset="0%" stop-color="#efb27d" />
-      <stop offset="52%" stop-color="#d8955c" />
-      <stop offset="100%" stop-color="#9e6234" />
-    </linearGradient>
-
-    <!-- 中心创世日蚀星核 -->
-    <radialGradient id="sparkHaloGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff6de" stop-opacity="0.98" />
-      <stop offset="28%" stop-color="#e5b860" stop-opacity="0.62" />
-      <stop offset="66%" stop-color="#e5b860" stop-opacity="0.14" />
-      <stop offset="100%" stop-color="#e5b860" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- 水平中轴微光扫掠 -->
-    <linearGradient id="glintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#dbb368" stop-opacity="0" />
-      <stop offset="50%" stop-color="#dbb368" stop-opacity="0.88" />
-      <stop offset="100%" stop-color="#dbb368" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- 水平中轴基线渐变 -->
-    <linearGradient id="axisRuleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#dbb368" stop-opacity="0.58" />
-      <stop offset="62%" stop-color="#dbb368" stop-opacity="0.22" />
-      <stop offset="100%" stop-color="#dbb368" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- 柔光滤镜（仅用于极克制日蚀核心，无廉价霓虹溢出） -->
-    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="2.6" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+  
   </defs>
-
-  <!-- 无缝融入 GitHub 页面背景 -->
-  <rect width="1200" height="340" fill="#0d1117" />
-
-  <!-- 主画幅（圆角馆藏版画框） -->
-  <g clip-path="url(#plateClip)">
-    <rect x="8" y="8" width="1184" height="324" fill="url(#canvasGrad)" />
-    <rect x="8" y="8" width="1184" height="324" fill="url(#classicalWarmGlow)" />
-    <rect x="8" y="8" width="1184" height="324" fill="url(#emblemHalo)" />
-
-    <!-- 左侧：维特鲁威黄金比例方圆与万神殿穹顶极细铜版构图线 -->
-    <g fill="none" stroke="#dbb368" stroke-width="0.65" opacity="0.11">
-      <circle cx="176" cy="170" r="146" />
-      <circle cx="176" cy="170" r="104" stroke-dasharray="2 5" />
-      <rect x="52" y="46" width="248" height="248" />
-      <line x1="52" y1="170" x2="660" y2="170" opacity="0.65" />
-      <line x1="176" y1="24" x2="176" y2="316" opacity="0.55" />
-      <!-- 穹顶弧线 -->
-      <path d="M 8 296 Q 290 24 640 318" opacity="0.55" />
-      <path d="M 380 8 Q 520 170 380 332" opacity="0.45" />
-    </g>
-
-    <!-- 深空多星等星野 -->
-    <g>
-      <circle class="twinkle-a" cx="652" cy="54" r="1" fill="#f4dfb8" opacity="0.42" />
-    <circle class="twinkle-b" cx="688" cy="108" r="1.25" fill="#dce5f7" opacity="0.52" />
-    <circle class="twinkle-c" cx="716" cy="46" r="0.9" fill="#dce5f7" opacity="0.36" />
-    <circle class="twinkle-a" cx="742" cy="294" r="1.1" fill="#f4dfb8" opacity="0.44" />
-    <circle class="twinkle-b" cx="764" cy="72" r="1.4" fill="#f4dfb8" opacity="0.56" />
-    <circle class="twinkle-c" cx="796" cy="304" r="0.95" fill="#dce5f7" opacity="0.38" />
-    <circle class="twinkle-a" cx="820" cy="38" r="1.15" fill="#dce5f7" opacity="0.48" />
-    <circle class="twinkle-b" cx="934" cy="44" r="1.3" fill="#f4dfb8" opacity="0.54" />
-    <circle class="twinkle-c" cx="964" cy="258" r="1.05" fill="#dce5f7" opacity="0.42" />
-    <circle class="twinkle-a" cx="1008" cy="128" r="0.95" fill="#dce5f7" opacity="0.4" />
-    <circle class="twinkle-b" cx="1028" cy="254" r="1.1" fill="#f4dfb8" opacity="0.46" />
-    <circle class="twinkle-c" cx="1054" cy="74" r="1.2" fill="#dce5f7" opacity="0.5" />
-    <circle class="twinkle-a" cx="1086" cy="174" r="0.9" fill="#dce5f7" opacity="0.38" />
-    <circle class="twinkle-b" cx="1112" cy="262" r="1.15" fill="#f4dfb8" opacity="0.48" />
-    <circle class="twinkle-c" cx="1146" cy="98" r="1.35" fill="#f4dfb8" opacity="0.55" />
-    <circle class="twinkle-a" cx="1158" cy="224" r="1" fill="#dce5f7" opacity="0.42" />
-    <circle class="twinkle-c" cx="582" cy="74" r="0.95" fill="#f4dfb8" opacity="0.28" />
-    <circle class="twinkle-b" cx="614" cy="278" r="1" fill="#f4dfb8" opacity="0.3" />
-    <circle class="twinkle-a" cx="536" cy="42" r="0.85" fill="#f4dfb8" opacity="0.22" />
-    <circle class="twinkle-a" cx="768" cy="258" r="0.95" fill="#dce5f7" opacity="0.36" />
-    <circle class="twinkle-c" cx="1038" cy="194" r="1" fill="#dce5f7" opacity="0.38" />
-    <circle class="twinkle-b" cx="1128" cy="148" r="0.85" fill="#dce5f7" opacity="0.36" />
-    </g>
-
-    <!-- 右侧：七星星座（SEVEN COORDINATES） -->
-    <g>
-      <line x1="998" y1="92" x2="1050" y2="118" stroke="#dbb368" stroke-width="0.65" opacity="0.24" />
-    <line x1="1050" y1="118" x2="1100" y2="98" stroke="#dbb368" stroke-width="0.65" opacity="0.24" />
-    <line x1="1100" y1="98" x2="1140" y2="138" stroke="#dbb368" stroke-width="0.65" opacity="0.24" />
-    <line x1="1140" y1="138" x2="1122" y2="198" stroke="#dbb368" stroke-width="0.65" opacity="0.24" />
-    <line x1="1122" y1="198" x2="1072" y2="234" stroke="#dbb368" stroke-width="0.65" opacity="0.24" />
-    <line x1="1072" y1="234" x2="1024" y2="212" stroke="#dbb368" stroke-width="0.65" opacity="0.24" />
-    <line x1="1024" y1="212" x2="1050" y2="118" stroke="#dbb368" stroke-width="0.65" opacity="0.24" />
-      <g class="twinkle-a">
-      <circle cx="998" cy="92" r="5.28" fill="#dbb368" opacity="0.14" />
-      <circle cx="998" cy="92" r="2.2" fill="#f4ebd8" opacity="0.82" />
-    </g>
-    <g class="twinkle-b">
-      <circle cx="1050" cy="118" r="4.56" fill="#dbb368" opacity="0.14" />
-      <circle cx="1050" cy="118" r="1.9" fill="#f4ebd8" opacity="0.82" />
-    </g>
-    <g class="twinkle-a">
-      <circle cx="1100" cy="98" r="5.04" fill="#dbb368" opacity="0.14" />
-      <circle cx="1100" cy="98" r="2.1" fill="#f4ebd8" opacity="0.82" />
-    </g>
-    <g class="hero-star" transform="translate(1140, 138)">
-      <circle r="11" fill="url(#sparkHaloGrad)" opacity="0.58" />
-      <line x1="-11" y1="0" x2="11" y2="0" stroke="#f3d492" stroke-width="0.7" opacity="0.78" />
-      <line x1="0" y1="-11" x2="0" y2="11" stroke="#f3d492" stroke-width="0.7" opacity="0.78" />
-      <circle r="2.7" fill="#f4ebd8" />
-    </g>
-    <g class="twinkle-a">
-      <circle cx="1122" cy="198" r="4.8" fill="#dbb368" opacity="0.14" />
-      <circle cx="1122" cy="198" r="2" fill="#f4ebd8" opacity="0.82" />
-    </g>
-    <g class="twinkle-b">
-      <circle cx="1072" cy="234" r="4.32" fill="#dbb368" opacity="0.14" />
-      <circle cx="1072" cy="234" r="1.8" fill="#f4ebd8" opacity="0.82" />
-    </g>
-    <g class="twinkle-a">
-      <circle cx="1024" cy="212" r="4.8" fill="#dbb368" opacity="0.14" />
-      <circle cx="1024" cy="212" r="2" fill="#f4ebd8" opacity="0.82" />
-    </g>
-    </g>
-
-    <!-- 视觉中心：AxisEmblem3D 1:1 向量倒角圣环 + 旋转双层天球仪 -->
-    <g transform="translate(830, 170)">
-      <!-- 静止基准子午十字线 -->
-      <line x1="-156" y1="0" x2="156" y2="0" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-      <line x1="0" y1="-144" x2="0" y2="144" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-
-      <!-- 顺时针慢旋：天球仪刻度外环 -->
+  <rect width="640" height="460" fill="#ffffff"/>
+  <g clip-path="url(#hm0-clip)">
+    <rect x="6" y="6" width="628" height="448" fill="url(#hm0-bg)"/>
+    <line x1="6" y1="50" x2="634" y2="50" stroke="#e2d7c4" stroke-width="0.9"/>
+    <text class="mono" x="30" y="33" font-size="12" letter-spacing="2" fill="#966828">AXIS OBSERVATORY</text>
+    <text class="mono" x="610" y="33" text-anchor="end" font-size="12" letter-spacing="2" fill="#73685a">MMXXVI</text>
+    <g transform="translate(320, 154)">
+      
+      <line x1="-96.32" y1="0" x2="96.32" y2="0" stroke="#966828" stroke-width="0.55" opacity="0.18"/>
+      <line x1="0" y1="-87.36" x2="0" y2="87.36" stroke="#966828" stroke-width="0.55" opacity="0.18"/>
       <g class="spin-cw">
-        <circle r="108" fill="none" stroke="#dbb368" stroke-width="0.7" opacity="0.34" />
-        <circle r="126" fill="none" stroke="#dbb368" stroke-width="0.55" stroke-dasharray="1.5 7.5" opacity="0.32" />
-        <line x1="99.5" y1="0" x2="113.5" y2="0" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="103.6" y1="9.06" x2="110.58" y2="9.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="102.42" y1="18.06" x2="109.31" y2="19.27" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="100.46" y1="26.92" x2="107.22" y2="28.73" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="97.73" y1="35.57" x2="104.31" y2="37.96" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="94.26" y1="43.95" x2="100.6" y2="46.91" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="86.17" y1="49.75" x2="98.29" y2="56.75" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="85.19" y1="59.65" x2="90.93" y2="63.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="79.67" y1="66.85" x2="85.03" y2="71.35" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="73.54" y1="73.54" x2="78.49" y2="78.49" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="66.85" y1="79.67" x2="71.35" y2="85.03" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="59.65" y1="85.19" x2="63.67" y2="90.93" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="49.75" y1="86.17" x2="56.75" y2="98.29" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="43.95" y1="94.26" x2="46.91" y2="100.6" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="35.57" y1="97.73" x2="37.96" y2="104.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="26.92" y1="100.46" x2="28.73" y2="107.22" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="18.06" y1="102.42" x2="19.27" y2="109.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="9.06" y1="103.6" x2="9.67" y2="110.58" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="0" y1="99.5" x2="0" y2="113.5" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="-9.06" y1="103.6" x2="-9.67" y2="110.58" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-18.06" y1="102.42" x2="-19.27" y2="109.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-26.92" y1="100.46" x2="-28.73" y2="107.22" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-35.57" y1="97.73" x2="-37.96" y2="104.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-43.95" y1="94.26" x2="-46.91" y2="100.6" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-49.75" y1="86.17" x2="-56.75" y2="98.29" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="-59.65" y1="85.19" x2="-63.67" y2="90.93" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-66.85" y1="79.67" x2="-71.35" y2="85.03" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-73.54" y1="73.54" x2="-78.49" y2="78.49" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-79.67" y1="66.85" x2="-85.03" y2="71.35" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-85.19" y1="59.65" x2="-90.93" y2="63.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-86.17" y1="49.75" x2="-98.29" y2="56.75" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="-94.26" y1="43.95" x2="-100.6" y2="46.91" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-97.73" y1="35.57" x2="-104.31" y2="37.96" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-100.46" y1="26.92" x2="-107.22" y2="28.73" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-102.42" y1="18.06" x2="-109.31" y2="19.27" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-103.6" y1="9.06" x2="-110.58" y2="9.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-99.5" y1="0" x2="-113.5" y2="0" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="-103.6" y1="-9.06" x2="-110.58" y2="-9.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-102.42" y1="-18.06" x2="-109.31" y2="-19.27" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-100.46" y1="-26.92" x2="-107.22" y2="-28.73" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-97.73" y1="-35.57" x2="-104.31" y2="-37.96" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-94.26" y1="-43.95" x2="-100.6" y2="-46.91" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-86.17" y1="-49.75" x2="-98.29" y2="-56.75" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="-85.19" y1="-59.65" x2="-90.93" y2="-63.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-79.67" y1="-66.85" x2="-85.03" y2="-71.35" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-73.54" y1="-73.54" x2="-78.49" y2="-78.49" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-66.85" y1="-79.67" x2="-71.35" y2="-85.03" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-59.65" y1="-85.19" x2="-63.67" y2="-90.93" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-49.75" y1="-86.17" x2="-56.75" y2="-98.29" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="-43.95" y1="-94.26" x2="-46.91" y2="-100.6" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-35.57" y1="-97.73" x2="-37.96" y2="-104.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-26.92" y1="-100.46" x2="-28.73" y2="-107.22" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-18.06" y1="-102.42" x2="-19.27" y2="-109.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="-9.06" y1="-103.6" x2="-9.67" y2="-110.58" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="0" y1="-99.5" x2="0" y2="-113.5" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="9.06" y1="-103.6" x2="9.67" y2="-110.58" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="18.06" y1="-102.42" x2="19.27" y2="-109.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="26.92" y1="-100.46" x2="28.73" y2="-107.22" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="35.57" y1="-97.73" x2="37.96" y2="-104.31" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="43.95" y1="-94.26" x2="46.91" y2="-100.6" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="49.75" y1="-86.17" x2="56.75" y2="-98.29" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="59.65" y1="-85.19" x2="63.67" y2="-90.93" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="66.85" y1="-79.67" x2="71.35" y2="-85.03" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="73.54" y1="-73.54" x2="78.49" y2="-78.49" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="79.67" y1="-66.85" x2="85.03" y2="-71.35" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="85.19" y1="-59.65" x2="90.93" y2="-63.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="86.17" y1="-49.75" x2="98.29" y2="-56.75" stroke="#dbb368" stroke-width="0.9" opacity="0.46" />
-        <line x1="94.26" y1="-43.95" x2="100.6" y2="-46.91" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="97.73" y1="-35.57" x2="104.31" y2="-37.96" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="100.46" y1="-26.92" x2="107.22" y2="-28.73" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="102.42" y1="-18.06" x2="109.31" y2="-19.27" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <line x1="103.6" y1="-9.06" x2="110.58" y2="-9.67" stroke="#dbb368" stroke-width="0.55" opacity="0.18" />
-        <!-- 轨道小星标 -->
-        <circle cx="108" cy="0" r="2.2" fill="#dbb368" opacity="0.82" />
-        <circle cx="-108" cy="0" r="1.5" fill="#a9b6cf" opacity="0.6" />
+        <circle r="71.68" fill="none" stroke="#966828" stroke-width="0.7" opacity="0.34"/>
+        <circle r="82.88" fill="none" stroke="#966828" stroke-width="0.55" stroke-dasharray="1.5 7.5" opacity="0.32"/>
+        <line x1="65.44" y1="0" x2="75.92" y2="0" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="69.06" y1="7.26" x2="73.52" y2="7.73" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="67.92" y1="14.44" x2="72.3" y2="15.37" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="66.04" y1="21.46" x2="70.3" y2="22.84" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="63.44" y1="28.24" x2="67.53" y2="30.07" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="56.67" y1="32.72" x2="65.75" y2="37.96" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="56.18" y1="40.82" x2="59.8" y2="43.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="51.6" y1="46.46" x2="54.93" y2="49.46" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="46.46" y1="51.6" x2="49.46" y2="54.93" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="40.82" y1="56.18" x2="43.45" y2="59.8" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="32.72" y1="56.67" x2="37.96" y2="65.75" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="28.24" y1="63.44" x2="30.07" y2="67.53" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="21.46" y1="66.04" x2="22.84" y2="70.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="14.44" y1="67.92" x2="15.37" y2="72.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="7.26" y1="69.06" x2="7.73" y2="73.52" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="0" y1="65.44" x2="0" y2="75.92" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-7.26" y1="69.06" x2="-7.73" y2="73.52" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-14.44" y1="67.92" x2="-15.37" y2="72.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-21.46" y1="66.04" x2="-22.84" y2="70.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-28.24" y1="63.44" x2="-30.07" y2="67.53" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-32.72" y1="56.67" x2="-37.96" y2="65.75" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-40.82" y1="56.18" x2="-43.45" y2="59.8" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-46.46" y1="51.6" x2="-49.46" y2="54.93" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-51.6" y1="46.46" x2="-54.93" y2="49.46" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-56.18" y1="40.82" x2="-59.8" y2="43.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-56.67" y1="32.72" x2="-65.75" y2="37.96" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-63.44" y1="28.24" x2="-67.53" y2="30.07" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-66.04" y1="21.46" x2="-70.3" y2="22.84" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-67.92" y1="14.44" x2="-72.3" y2="15.37" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-69.06" y1="7.26" x2="-73.52" y2="7.73" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-65.44" y1="0" x2="-75.92" y2="0" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-69.06" y1="-7.26" x2="-73.52" y2="-7.73" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-67.92" y1="-14.44" x2="-72.3" y2="-15.37" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-66.04" y1="-21.46" x2="-70.3" y2="-22.84" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-63.44" y1="-28.24" x2="-67.53" y2="-30.07" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-56.67" y1="-32.72" x2="-65.75" y2="-37.96" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-56.18" y1="-40.82" x2="-59.8" y2="-43.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-51.6" y1="-46.46" x2="-54.93" y2="-49.46" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-46.46" y1="-51.6" x2="-49.46" y2="-54.93" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-40.82" y1="-56.18" x2="-43.45" y2="-59.8" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-32.72" y1="-56.67" x2="-37.96" y2="-65.75" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-28.24" y1="-63.44" x2="-30.07" y2="-67.53" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-21.46" y1="-66.04" x2="-22.84" y2="-70.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-14.44" y1="-67.92" x2="-15.37" y2="-72.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-7.26" y1="-69.06" x2="-7.73" y2="-73.52" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="0" y1="-65.44" x2="0" y2="-75.92" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="7.26" y1="-69.06" x2="7.73" y2="-73.52" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="14.44" y1="-67.92" x2="15.37" y2="-72.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="21.46" y1="-66.04" x2="22.84" y2="-70.3" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="28.24" y1="-63.44" x2="30.07" y2="-67.53" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="32.72" y1="-56.67" x2="37.96" y2="-65.75" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="40.82" y1="-56.18" x2="43.45" y2="-59.8" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="46.46" y1="-51.6" x2="49.46" y2="-54.93" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="51.6" y1="-46.46" x2="54.93" y2="-49.46" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="56.18" y1="-40.82" x2="59.8" y2="-43.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="56.67" y1="-32.72" x2="65.75" y2="-37.96" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="63.44" y1="-28.24" x2="67.53" y2="-30.07" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="66.04" y1="-21.46" x2="70.3" y2="-22.84" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="67.92" y1="-14.44" x2="72.3" y2="-15.37" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="69.06" y1="-7.26" x2="73.52" y2="-7.73" stroke="#966828" stroke-width="0.55" opacity="0.18"/>
+        <circle cx="71.68" cy="0" r="2.2" fill="#966828" opacity="0.82"/>
       </g>
-
-      <!-- 逆时针慢旋：倾斜椭圆星轨环（呼应 AxisEmblem3D tiltedOrbitRing） -->
       <g transform="rotate(-24)">
         <g class="spin-ccw">
-          <ellipse rx="136" ry="52" fill="none" stroke="#a9b6cf" stroke-width="0.7" opacity="0.28" />
-          <ellipse rx="116" ry="92" fill="none" stroke="#dbb368" stroke-width="0.55" stroke-dasharray="28 14 4 14" opacity="0.28" />
-          <circle cx="136" cy="0" r="2.1" fill="#dce5f7" opacity="0.78" />
+          <ellipse rx="88.48" ry="33.6" fill="none" stroke="#56698a" stroke-width="0.7" opacity="0.28"/>
+          <ellipse rx="76.16" ry="59.36" fill="none" stroke="#966828" stroke-width="0.55" stroke-dasharray="26 14 4 14" opacity="0.28"/>
+          <circle cx="88.48" cy="0" r="2.1" fill="#5b6c8c" opacity="0.78"/>
         </g>
       </g>
-
-      <!-- 1:1 Axis 圣环本体（带极克制呼吸微浮） -->
-      <g class="emblem-drift">
-        <!-- 四段倒角金属圣环弧 -->
-        <g fill="url(#arcMetalGrad)" stroke="#f1d7a4" stroke-width="0.6" stroke-opacity="0.45">
-          <path d="M -14.84 -68.16 A 71.4 71.4 0 0 0 -42.97 -55.34 L -36.9 -47.29 A 61.32 61.32 0 0 1 -12.75 -58.3 Z" />
-          <path d="M 42.97 -55.34 A 71.4 71.4 0 0 0 14.84 -68.16 L 12.75 -58.3 A 61.32 61.32 0 0 1 36.9 -47.29 Z" />
-          <path d="M -61.2 -35.09 A 71.4 71.4 0 0 0 -14.84 71.52 L -12.75 61.66 A 61.32 61.32 0 0 1 -52.56 -29.9 Z" />
-          <path d="M 14.84 71.52 A 71.4 71.4 0 0 0 61.2 -35.09 L 52.56 -29.9 A 61.32 61.32 0 0 1 12.75 61.66 Z" />
+      <g class="drift">
+        <g fill="url(#hm0-arc)" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52">
+          <path d="M -9.9 -45.44 A 47.6 47.6 0 0 0 -28.65 -36.9 L -24.6 -31.53 A 40.88 40.88 0 0 1 -8.5 -38.87 Z"/><path d="M 28.65 -36.9 A 47.6 47.6 0 0 0 9.9 -45.44 L 8.5 -38.87 A 40.88 40.88 0 0 1 24.6 -31.53 Z"/><path d="M -40.8 -23.4 A 47.6 47.6 0 0 0 -9.9 47.68 L -8.5 41.11 A 40.88 40.88 0 0 1 -35.04 -19.93 Z"/><path d="M 9.9 47.68 A 47.6 47.6 0 0 0 40.8 -23.4 L 35.04 -19.93 A 40.88 40.88 0 0 1 8.5 41.11 Z"/>
         </g>
-
-        <!-- 顶部香槟金棱冠（双面立体切分） -->
-        <path d="M 0 -86.52 L 0 -25.2 L -13.86 -57.96 Z" fill="#ebd3a5" />
-        <path d="M 0 -86.52 L 13.86 -57.96 L 0 -25.2 Z" fill="#b89763" />
-        <path d="M 0 -86.52 L 13.86 -57.96 L 0 -25.2 L -13.86 -57.96 Z" fill="none" stroke="#f1d7a4" stroke-width="0.65" stroke-opacity="0.45" />
-
-        <!-- 左翼（双面立体切分） -->
-        <path d="M -0.84 -11.76 L -20.16 -41.16 L -90.72 -86.52 Z" fill="#a0876a" />
-        <path d="M -0.84 -11.76 L -90.72 -86.52 L -32.76 -26.04 Z" fill="#5b4a38" />
-        <path d="M -0.84 -11.76 L -20.16 -41.16 L -90.72 -86.52 L -32.76 -26.04 Z" fill="none" stroke="#f1d7a4" stroke-width="0.6" stroke-opacity="0.45" />
-
-        <!-- 右翼（双面立体切分） -->
-        <path d="M 0.84 -11.76 L 90.72 -86.52 L 20.16 -41.16 Z" fill="#a0876a" />
-        <path d="M 0.84 -11.76 L 32.76 -26.04 L 90.72 -86.52 Z" fill="#5b4a38" />
-        <path d="M 0.84 -11.76 L 32.76 -26.04 L 90.72 -86.52 L 20.16 -41.16 Z" fill="none" stroke="#f1d7a4" stroke-width="0.6" stroke-opacity="0.45" />
-
-        <!-- 底部中轴刃（双面立体切分） -->
-        <path d="M 0 -10.5 L 0 97.44 L -14.28 20.16 Z" fill="#a0876a" />
-        <path d="M 0 -10.5 L 14.28 20.16 L 0 97.44 Z" fill="#5b4a38" />
-        <path d="M 0 -10.5 L 14.28 20.16 L 0 97.44 L -14.28 20.16 Z" fill="none" stroke="#f1d7a4" stroke-width="0.6" stroke-opacity="0.45" />
-
-        <!-- 三刃中心创世日蚀微核（Act III — Where Thought Ignites） -->
-        <g class="eclipse-core">
-          <circle cx="0" cy="-11.76" r="22" fill="url(#sparkHaloGrad)" />
-          <line x1="-18" y1="-11.76" x2="18" y2="-11.76" stroke="#fff6de" stroke-width="0.8" opacity="0.82" filter="url(#softGlow)" />
-          <line x1="0" y1="-29.76" x2="0" y2="6.24" stroke="#fff6de" stroke-width="0.8" opacity="0.82" filter="url(#softGlow)" />
-          <circle cx="0" cy="-11.76" r="2.6" fill="#fff6de" filter="url(#softGlow)" />
+        <path d="M 0 -57.68 L 0 -16.8 L -9.24 -38.64 Z" fill="#cfa96c"/><path d="M 0 -57.68 L 9.24 -38.64 L 0 -16.8 Z" fill="#9c783f"/>
+        <path d="M 0 -57.68 L 9.24 -38.64 L 0 -16.8 L -9.24 -38.64 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <path d="M -0.56 -7.84 L -13.44 -27.44 L -60.48 -57.68 Z" fill="#7d664f"/><path d="M -0.56 -7.84 L -60.48 -57.68 L -21.84 -17.36 Z" fill="#47392b"/>
+        <path d="M -0.56 -7.84 L -13.44 -27.44 L -60.48 -57.68 L -21.84 -17.36 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <path d="M 0.56 -7.84 L 60.48 -57.68 L 13.44 -27.44 Z" fill="#7d664f"/><path d="M 0.56 -7.84 L 21.84 -17.36 L 60.48 -57.68 Z" fill="#47392b"/>
+        <path d="M 0.56 -7.84 L 21.84 -17.36 L 60.48 -57.68 L 13.44 -27.44 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <path d="M 0 -7 L 0 64.96 L -9.52 13.44 Z" fill="#7d664f"/><path d="M 0 -7 L 9.52 13.44 L 0 64.96 Z" fill="#47392b"/>
+        <path d="M 0 -7 L 9.52 13.44 L 0 64.96 L -9.52 13.44 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <g class="pulse">
+          <circle cx="0" cy="-7.84" r="14" fill="url(#hm0-spark)"/>
+          <line x1="-11.2" y1="-7.84" x2="11.2" y2="-7.84" stroke="#fff9ea" stroke-width="0.8" opacity="0.82"/>
+          <line x1="0" y1="-19.04" x2="0" y2="3.36" stroke="#fff9ea" stroke-width="0.8" opacity="0.82"/>
+          <circle cx="0" cy="-7.84" r="2.4" fill="#fff9ea"/>
         </g>
       </g>
     </g>
-
-    <!-- 左侧人文古典编辑排版区 -->
-    <g>
-      <!-- 顶部章节眉标（零中点、>=12px） -->
-      <text class="font-mono" x="62" y="64" font-size="12.5" letter-spacing="3.2" fill="#dbb368">01 ORIGIN  /  05 COSMOS</text>
-
-      <!-- 主品牌与个人署名锁定：AXIS | Star -->
-      <text class="font-serif" x="59" y="146" font-size="74" letter-spacing="13" fill="#f2ece1">AXIS</text>
-      <line x1="296" y1="98" x2="296" y2="146" stroke="rgba(219, 179, 104, 0.42)" stroke-width="1" />
-      <text class="font-serif" x="320" y="143" font-size="44" font-style="italic" letter-spacing="2.0" fill="#e5c176">Star</text>
-
-      <!-- 水平连接轴线（与维特鲁威圆心、圣环中心严格共线于 y=170） -->
-      <line x1="62" y1="170" x2="626" y2="170" stroke="url(#axisRuleGrad)" stroke-width="0.9" />
-      <g clip-path="url(#axisRuleClip)">
-        <rect class="meridian-glint" x="62" y="169.3" width="128" height="1.4" fill="url(#glintGrad)" />
-      </g>
-
-      <!-- 双语诗意主副标 -->
-      <text class="font-serif" x="62" y="210" font-size="23" font-style="italic" letter-spacing="0.7" fill="#d8cfc0">From classical form to cosmic execution.</text>
-      <text class="font-cjk" x="62" y="240" font-size="14.5" letter-spacing="3.4" fill="#bfa989">从古典艺术到宇宙星辰，从思考到实现</text>
-
-      <!-- 底部出版落款栏（全部 >=12px，无中点） -->
-      <text class="font-mono" x="62" y="294" font-size="12" letter-spacing="1.8" fill="#9a9389">
-        <tspan fill="#dbb368">BY</tspan>
-        <tspan fill="#dfd5c5"> STAR</tspan>
-        <tspan dx="18" fill="rgba(219, 179, 104, 0.42)">|</tspan>
-        <tspan dx="18" fill="#dbb368">PROJECT</tspan>
-        <tspan fill="#dfd5c5"> AXIS</tspan>
-        <tspan dx="18" fill="rgba(219, 179, 104, 0.42)">|</tspan>
-        <tspan dx="18">AGENT RUNTIME  /  WEBGL  /  SYSTEMS</tspan>
-      </text>
-    </g>
-
-    <!-- 右上与右下极微天文坐标落款（全部 >=12px） -->
-    <text class="font-mono" x="1142" y="64" text-anchor="end" font-size="12" letter-spacing="2.2" fill="#8d96a8" opacity="0.82">RA 04H 18M  /  DEC +31°</text>
-    <text class="font-mono" x="1142" y="294" text-anchor="end" font-size="12" letter-spacing="1.8" fill="#8d96a8" opacity="0.82">SEVEN COORDINATES  /  MMXXVI</text>
+    <text class="serif" x="320" y="294" text-anchor="middle" font-size="54" letter-spacing="10" fill="#1b1611">AXIS <tspan font-style="italic" font-size="38" letter-spacing="2" fill="#7e531b">Star</tspan></text>
+    <text class="serif" x="320" y="330" text-anchor="middle" font-size="20" font-style="italic" fill="#4a4035">From classical form to cosmic execution.</text>
+    <text class="cjk-hero" x="320" y="360" text-anchor="middle" font-size="14" letter-spacing="2.4" fill="#73685a">从古典艺术到宇宙星辰，从思考到实现</text>
+    <line x1="30" y1="388" x2="610" y2="388" stroke="#e2d7c4" stroke-width="0.9"/>
+    <text class="mono" x="320" y="422" text-anchor="middle" font-size="12" letter-spacing="1.8" fill="#966828">AGENT RUNTIME  /  HARNESS  /  WEBGL  /  LUA</text>
   </g>
-
-  <!-- 馆藏版画细边框与四角对位十字 -->
-  <rect x="8.5" y="8.5" width="1183" height="323" rx="10" fill="none" stroke="rgba(219, 179, 104, 0.26)" stroke-width="0.9" />
-  <rect x="14.5" y="14.5" width="1171" height="311" rx="6" fill="none" stroke="rgba(240, 230, 213, 0.06)" stroke-width="0.6" />
-
-  <!-- 四角微细鎏金对位刻痕 -->
-  <g stroke="#dbb368" stroke-width="0.9" opacity="0.68">
-    <path d="M 24 24 H 36 M 24 24 V 36" fill="none" />
-    <path d="M 1176 24 H 1164 M 1176 24 V 36" fill="none" />
-    <path d="M 24 316 H 36 M 24 316 V 304" fill="none" />
-    <path d="M 1176 316 H 1164 M 1176 316 V 304" fill="none" />
+  <rect x="6.5" y="6.5" width="627" height="447" rx="8" fill="none" stroke="#cfbe9f" stroke-width="1.1"/>
+  <g stroke="#966828" stroke-width="0.9" opacity="0.62" fill="none">
+    <path d="M 18 18 H 27 M 18 18 V 27"/>
+    <path d="M 622 18 H 613 M 622 18 V 27"/>
+    <path d="M 18 442 H 27 M 18 442 V 433"/>
+    <path d="M 622 442 H 613 M 622 442 V 433"/>
   </g>
 </svg>

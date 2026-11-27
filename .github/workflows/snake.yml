@@ -1,0 +1,33 @@
+name: Generate Axis Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    name: Generate Snake SVG
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=%23966828&color_dots=%23efe8db,%23e2cfa8,%23caa268,%23a37435,%236e4918
+            dist/github-contribution-grid-snake-dark.svg?color_snake=%23dbb368&color_dots=%23181512,%233a2d1e,%23694e2c,%23a3783b,%23dbb368
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push snake SVG to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-labelledby="axisBannerTitle axisBannerDesc">
-  <title id="axisBannerTitle">AXIS — Star | From Classical Form to Cosmic Execution</title>
-  <desc id="axisBannerDesc">Dark Florentine classical humanism transitioning into deep cosmic starfield, featuring the Axis emblem and Star signature.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="t d">
+  <title id="t">AXIS — Star | From Classical Form to Cosmic Execution</title>
+  <desc id="d">AXIS Observatory exhibition header featuring the forged Axis emblem, Florentine classical proportion lines, and cosmic coordinates.</desc>
   <defs>
     <style>
       @font-face {
@@ -29,417 +28,181 @@
         font-weight: 400;
         font-style: normal;
       }
-
-      .font-serif { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; }
-      .font-cjk { font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif; }
-      .font-mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-
-      .spin-cw {
-        animation: astrolabeCW 76s linear infinite;
-        transform-origin: 0px 0px;
-      }
-      .spin-ccw {
-        animation: astrolabeCCW 58s linear infinite;
-        transform-origin: 0px 0px;
-      }
-      .emblem-drift {
-        animation: emblemDrift 9s ease-in-out infinite;
-      }
-      .eclipse-core {
-        animation: eclipsePulse 6.4s ease-in-out infinite;
-        transform-origin: 0px -11.76px;
-      }
-      .twinkle-a { animation: starPulseA 5.2s ease-in-out infinite; }
-      .twinkle-b { animation: starPulseB 6.8s ease-in-out 1.4s infinite; }
-      .twinkle-c { animation: starPulseC 8.4s ease-in-out 2.7s infinite; }
-      .hero-star { animation: heroPulse 5.6s ease-in-out infinite; }
-      .meridian-glint { animation: meridianSweep 11s ease-in-out infinite; }
-
-      @keyframes astrolabeCW {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      @keyframes astrolabeCCW {
-        from { transform: rotate(360deg); }
-        to { transform: rotate(0deg); }
-      }
-      @keyframes emblemDrift {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-2.4px); }
-      }
-      @keyframes eclipsePulse {
-        0%, 100% { opacity: 0.72; transform: scale(0.95); }
-        50% { opacity: 1; transform: scale(1.07); }
-      }
-      @keyframes starPulseA {
-        0%, 100% { opacity: 0.34; }
-        50% { opacity: 0.88; }
-      }
-      @keyframes starPulseB {
-        0%, 100% { opacity: 0.42; }
-        50% { opacity: 0.94; }
-      }
-      @keyframes starPulseC {
-        0%, 100% { opacity: 0.28; }
-        50% { opacity: 0.76; }
-      }
-      @keyframes heroPulse {
-        0%, 100% { opacity: 0.78; }
-        50% { opacity: 1; }
-      }
-      @keyframes meridianSweep {
+      .serif { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .cjk-hero { font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif; }
+      .sans { font-family: 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', 'Segoe UI', sans-serif; }
+  
+      .spin-cw { animation: spinCW 72s linear infinite; transform-origin: 0px 0px; }
+      .spin-ccw { animation: spinCCW 54s linear infinite; transform-origin: 0px 0px; }
+      .drift { animation: driftY 8.5s ease-in-out infinite; }
+      .pulse { animation: pulseOp 4.4s ease-in-out infinite; }
+      .pulse-slow { animation: pulseOp 6.4s ease-in-out 1.2s infinite; }
+      .scan-y { animation: scanY 5.4s ease-in-out infinite; }
+      .flow-x { stroke-dasharray: 6 7; animation: flowX 3.8s linear infinite; }
+      .glint { animation: glintX 11s ease-in-out infinite; }
+      @keyframes spinCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes spinCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+      @keyframes driftY { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-2.2px); } }
+      @keyframes pulseOp { 0%, 100% { opacity: 0.48; } 50% { opacity: 1; } }
+      @keyframes scanY { 0%, 100% { transform: translateY(0px); opacity: 0.45; } 50% { transform: translateY(62px); opacity: 0.92; } }
+      @keyframes flowX { to { stroke-dashoffset: -26; } }
+      @keyframes glintX {
         0% { transform: translateX(-140px); opacity: 0; }
         16% { opacity: 0.85; }
         62% { opacity: 0.72; }
         84% { opacity: 0; }
         100% { transform: translateX(580px); opacity: 0; }
       }
-
       @media (prefers-reduced-motion: reduce) {
-        .spin-cw, .spin-ccw, .emblem-drift, .eclipse-core,
-        .twinkle-a, .twinkle-b, .twinkle-c, .hero-star, .meridian-glint {
-          animation: none !important;
-        }
+        *, *::before, *::after { animation: none !important; }
       }
-    </style>
-
-    <clipPath id="plateClip">
-      <rect x="8" y="8" width="1184" height="324" rx="10" />
-    </clipPath>
-    <clipPath id="axisRuleClip">
-      <rect x="62" y="167" width="564" height="6" />
-    </clipPath>
-
-    <!-- 从暗调佛罗伦萨古典暖殿到深空黑曜石星海的连续过渡 -->
-    <linearGradient id="canvasGrad" x1="0%" y1="15%" x2="100%" y2="85%">
-      <stop offset="0%" stop-color="#f7f1e6" />
-      <stop offset="52%" stop-color="#f6f3ed" />
-      <stop offset="100%" stop-color="#eef2f8" />
+</style>
+    
+    <clipPath id="h0-clip"><rect x="6" y="6" width="1188" height="428" rx="8"/></clipPath>
+    <linearGradient id="h0-bg" x1="0%" y1="10%" x2="100%" y2="90%">
+      <stop offset="0%" stop-color="#f7f1e6"/>
+      <stop offset="52%" stop-color="#f5f2ec"/>
+      <stop offset="100%" stop-color="#eef2f8"/>
     </linearGradient>
-
-    <!-- 卡拉瓦乔古典侧逆暖光 -->
-    <radialGradient id="classicalWarmGlow" cx="24%" cy="32%" r="48%">
-      <stop offset="0%" stop-color="#d7a85d" stop-opacity="0.14" />
-      <stop offset="65%" stop-color="#d7a85d" stop-opacity="0.03" />
-      <stop offset="100%" stop-color="#d7a85d" stop-opacity="0" />
+    <pattern id="h0-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.9" fill="rgba(27, 22, 17, 0.065)"/>
+    </pattern>
+    <linearGradient id="h0-arc" x1="12%" y1="8%" x2="88%" y2="92%">
+      <stop offset="0%" stop-color="#d88f55"/>
+      <stop offset="52%" stop-color="#ba733c"/>
+      <stop offset="100%" stop-color="#874c22"/>
+    </linearGradient>
+    <radialGradient id="h0-spark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff9ea" stop-opacity="0.96"/>
+      <stop offset="30%" stop-color="#d59a42" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d59a42" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- 中心日蚀微晕 -->
-    <radialGradient id="emblemHalo" cx="69.2%" cy="50%" r="28%">
-      <stop offset="0%" stop-color="#d7a85d" stop-opacity="0.14" />
-      <stop offset="48%" stop-color="#7e97c4" stop-opacity="0.07" />
-      <stop offset="100%" stop-color="#eef2f8" stop-opacity="0" />
+  
+    <clipPath id="h0-rule-clip"><rect x="58" y="205" width="548" height="6"/></clipPath>
+    <radialGradient id="h0-warm" cx="22%" cy="38%" r="48%">
+      <stop offset="0%" stop-color="#966828" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#966828" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- Axis 圣环倒角金属渐变 -->
-    <linearGradient id="arcMetalGrad" x1="12%" y1="8%" x2="88%" y2="92%">
-      <stop offset="0%" stop-color="#d88f55" />
-      <stop offset="52%" stop-color="#ba733c" />
-      <stop offset="100%" stop-color="#874c22" />
-    </linearGradient>
-
-    <!-- 中心创世日蚀星核 -->
-    <radialGradient id="sparkHaloGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff9ea" stop-opacity="0.98" />
-      <stop offset="28%" stop-color="#d59a42" stop-opacity="0.62" />
-      <stop offset="66%" stop-color="#d59a42" stop-opacity="0.14" />
-      <stop offset="100%" stop-color="#d59a42" stop-opacity="0" />
+    <radialGradient id="h0-cool" cx="70%" cy="46%" r="30%">
+      <stop offset="0%" stop-color="#966828" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#56698a" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#56698a" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- 水平中轴微光扫掠 -->
-    <linearGradient id="glintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#9c7134" stop-opacity="0" />
-      <stop offset="50%" stop-color="#9c7134" stop-opacity="0.88" />
-      <stop offset="100%" stop-color="#9c7134" stop-opacity="0" />
+    <linearGradient id="h0-axis" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#966828" stop-opacity="0.62"/>
+      <stop offset="65%" stop-color="#966828" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#966828" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- 水平中轴基线渐变 -->
-    <linearGradient id="axisRuleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#9c7134" stop-opacity="0.58" />
-      <stop offset="62%" stop-color="#9c7134" stop-opacity="0.22" />
-      <stop offset="100%" stop-color="#9c7134" stop-opacity="0" />
+    <linearGradient id="h0-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7e531b" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7e531b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7e531b" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- 柔光滤镜（仅用于极克制日蚀核心，无廉价霓虹溢出） -->
-    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="2.6" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <g clip-path="url(#h0-clip)">
+    <rect x="6" y="6" width="1188" height="428" fill="url(#h0-bg)"/>
+    <rect x="6" y="6" width="1188" height="428" fill="url(#h0-warm)"/>
+    <rect x="6" y="6" width="1188" height="428" fill="url(#h0-cool)"/>
 
-  <!-- 无缝融入 GitHub 页面背景 -->
-  <rect width="1200" height="340" fill="#ffffff" />
+    <!-- 顶部馆藏页眉带 -->
+    <line x1="6" y1="54" x2="1194" y2="54" stroke="#e2d7c4" stroke-width="0.9"/>
+    <rect x="46" y="26" width="8" height="8" rx="1" fill="#b86e36" opacity="0.9"/>
+    <text class="mono" x="64" y="35" font-size="12" letter-spacing="2.4" fill="#966828">EXHIBITION NO. 01</text>
+    <text class="mono" x="242" y="35" font-size="12" letter-spacing="2.0" fill="#73685a">AXIS OBSERVATORY  /  FLORENTINE TO COSMOS</text>
+    <text class="mono" x="920" y="35" text-anchor="end" font-size="12" letter-spacing="2.0" fill="#73685a">RA 04H 18M  /  DEC +31°</text>
+    <text class="mono" x="1152" y="35" text-anchor="end" font-size="12" letter-spacing="2.2" fill="#966828">ARCHIVE  /  MMXXVI</text>
 
-  <!-- 主画幅（圆角馆藏版画框） -->
-  <g clip-path="url(#plateClip)">
-    <rect x="8" y="8" width="1184" height="324" fill="url(#canvasGrad)" />
-    <rect x="8" y="8" width="1184" height="324" fill="url(#classicalWarmGlow)" />
-    <rect x="8" y="8" width="1184" height="324" fill="url(#emblemHalo)" />
-
-    <!-- 左侧：维特鲁威黄金比例方圆与万神殿穹顶极细铜版构图线 -->
-    <g fill="none" stroke="#8f6935" stroke-width="0.65" opacity="0.15">
-      <circle cx="176" cy="170" r="146" />
-      <circle cx="176" cy="170" r="104" stroke-dasharray="2 5" />
-      <rect x="52" y="46" width="248" height="248" />
-      <line x1="52" y1="170" x2="660" y2="170" opacity="0.65" />
-      <line x1="176" y1="24" x2="176" y2="316" opacity="0.55" />
-      <!-- 穹顶弧线 -->
-      <path d="M 8 296 Q 290 24 640 318" opacity="0.55" />
-      <path d="M 380 8 Q 520 170 380 332" opacity="0.45" />
+    <!-- 维特鲁威方圆构图线 -->
+    <g fill="none" stroke="#966828" stroke-width="0.65" opacity="0.15">
+      <circle cx="174" cy="208" r="142"/>
+      <circle cx="174" cy="208" r="100" stroke-dasharray="2 5"/>
+      <rect x="54" y="88" width="240" height="240"/>
+      <line x1="54" y1="208" x2="640" y2="208" opacity="0.65"/>
+      <line x1="174" y1="64" x2="174" y2="338" opacity="0.5"/>
+      <path d="M 8 330 Q 290 66 640 344" opacity="0.5"/>
     </g>
 
-    <!-- 深空多星等星野 -->
+    <!-- 星野与七星星座 -->
     <g>
-      <circle class="twinkle-a" cx="652" cy="54" r="1" fill="#9d6e2e" opacity="0.42" />
-    <circle class="twinkle-b" cx="688" cy="108" r="1.25" fill="#5b6c8c" opacity="0.52" />
-    <circle class="twinkle-c" cx="716" cy="46" r="0.9" fill="#5b6c8c" opacity="0.36" />
-    <circle class="twinkle-a" cx="742" cy="294" r="1.1" fill="#9d6e2e" opacity="0.44" />
-    <circle class="twinkle-b" cx="764" cy="72" r="1.4" fill="#9d6e2e" opacity="0.56" />
-    <circle class="twinkle-c" cx="796" cy="304" r="0.95" fill="#5b6c8c" opacity="0.38" />
-    <circle class="twinkle-a" cx="820" cy="38" r="1.15" fill="#5b6c8c" opacity="0.48" />
-    <circle class="twinkle-b" cx="934" cy="44" r="1.3" fill="#9d6e2e" opacity="0.54" />
-    <circle class="twinkle-c" cx="964" cy="258" r="1.05" fill="#5b6c8c" opacity="0.42" />
-    <circle class="twinkle-a" cx="1008" cy="128" r="0.95" fill="#5b6c8c" opacity="0.4" />
-    <circle class="twinkle-b" cx="1028" cy="254" r="1.1" fill="#9d6e2e" opacity="0.46" />
-    <circle class="twinkle-c" cx="1054" cy="74" r="1.2" fill="#5b6c8c" opacity="0.5" />
-    <circle class="twinkle-a" cx="1086" cy="174" r="0.9" fill="#5b6c8c" opacity="0.38" />
-    <circle class="twinkle-b" cx="1112" cy="262" r="1.15" fill="#9d6e2e" opacity="0.48" />
-    <circle class="twinkle-c" cx="1146" cy="98" r="1.35" fill="#9d6e2e" opacity="0.55" />
-    <circle class="twinkle-a" cx="1158" cy="224" r="1" fill="#5b6c8c" opacity="0.42" />
-    <circle class="twinkle-c" cx="582" cy="74" r="0.95" fill="#9d6e2e" opacity="0.28" />
-    <circle class="twinkle-b" cx="614" cy="278" r="1" fill="#9d6e2e" opacity="0.3" />
-    <circle class="twinkle-a" cx="536" cy="42" r="0.85" fill="#9d6e2e" opacity="0.22" />
-    <circle class="twinkle-a" cx="768" cy="258" r="0.95" fill="#5b6c8c" opacity="0.36" />
-    <circle class="twinkle-c" cx="1038" cy="194" r="1" fill="#5b6c8c" opacity="0.38" />
-    <circle class="twinkle-b" cx="1128" cy="148" r="0.85" fill="#5b6c8c" opacity="0.36" />
+      <circle class="pulse" cx="620" cy="92" r="1.1" fill="#9d6e2e" opacity="0.5"/><circle class="pulse-slow" cx="682" cy="128" r="1.3" fill="#5b6c8c" opacity="0.5"/><circle class="pulse" cx="734" cy="86" r="0.95" fill="#5b6c8c" opacity="0.5"/><circle class="pulse-slow" cx="940" cy="94" r="1.25" fill="#9d6e2e" opacity="0.5"/><circle class="pulse" cx="1018" cy="152" r="1" fill="#5b6c8c" opacity="0.5"/><circle class="pulse-slow" cx="1054" cy="286" r="1.15" fill="#9d6e2e" opacity="0.5"/><circle class="pulse" cx="1140" cy="122" r="1.2" fill="#5b6c8c" opacity="0.5"/><circle class="pulse-slow" cx="1152" cy="248" r="1" fill="#9d6e2e" opacity="0.5"/><circle class="pulse-slow" cx="658" cy="304" r="1" fill="#9d6e2e" opacity="0.5"/><circle class="pulse" cx="762" cy="310" r="1.1" fill="#5b6c8c" opacity="0.5"/><circle class="pulse-slow" cx="926" cy="312" r="1" fill="#5b6c8c" opacity="0.5"/>
+      <line x1="1002" y1="122" x2="1052" y2="146" stroke="#966828" stroke-width="0.65" opacity="0.26"/><line x1="1052" y1="146" x2="1102" y2="126" stroke="#966828" stroke-width="0.65" opacity="0.26"/><line x1="1102" y1="126" x2="1142" y2="164" stroke="#966828" stroke-width="0.65" opacity="0.26"/><line x1="1142" y1="164" x2="1122" y2="224" stroke="#966828" stroke-width="0.65" opacity="0.26"/><line x1="1122" y1="224" x2="1072" y2="262" stroke="#966828" stroke-width="0.65" opacity="0.26"/><line x1="1072" y1="262" x2="1024" y2="240" stroke="#966828" stroke-width="0.65" opacity="0.26"/><line x1="1024" y1="240" x2="1052" y2="146" stroke="#966828" stroke-width="0.65" opacity="0.26"/>
+      <circle class="pulse-slow" cx="1002" cy="122" r="2.1" fill="#3b3024" opacity="0.8"/><circle class="pulse-slow" cx="1052" cy="146" r="1.9" fill="#3b3024" opacity="0.8"/><circle class="pulse-slow" cx="1102" cy="126" r="2" fill="#3b3024" opacity="0.8"/><g class="pulse" transform="translate(1142,164)">
+                 <circle r="11" fill="url(#h0-spark)" opacity="0.6"/>
+                 <line x1="-10" y1="0" x2="10" y2="0" stroke="#7e531b" stroke-width="0.7" opacity="0.8"/>
+                 <line x1="0" y1="-10" x2="0" y2="10" stroke="#7e531b" stroke-width="0.7" opacity="0.8"/>
+                 <circle r="2.6" fill="#3b3024"/>
+               </g><circle class="pulse-slow" cx="1122" cy="224" r="2" fill="#3b3024" opacity="0.8"/><circle class="pulse-slow" cx="1072" cy="262" r="1.8" fill="#3b3024" opacity="0.8"/><circle class="pulse-slow" cx="1024" cy="240" r="2" fill="#3b3024" opacity="0.8"/>
     </g>
 
-    <!-- 右侧：七星星座（SEVEN COORDINATES） -->
-    <g>
-      <line x1="998" y1="92" x2="1050" y2="118" stroke="#8b632d" stroke-width="0.65" opacity="0.26" />
-    <line x1="1050" y1="118" x2="1100" y2="98" stroke="#8b632d" stroke-width="0.65" opacity="0.26" />
-    <line x1="1100" y1="98" x2="1140" y2="138" stroke="#8b632d" stroke-width="0.65" opacity="0.26" />
-    <line x1="1140" y1="138" x2="1122" y2="198" stroke="#8b632d" stroke-width="0.65" opacity="0.26" />
-    <line x1="1122" y1="198" x2="1072" y2="234" stroke="#8b632d" stroke-width="0.65" opacity="0.26" />
-    <line x1="1072" y1="234" x2="1024" y2="212" stroke="#8b632d" stroke-width="0.65" opacity="0.26" />
-    <line x1="1024" y1="212" x2="1050" y2="118" stroke="#8b632d" stroke-width="0.65" opacity="0.26" />
-      <g class="twinkle-a">
-      <circle cx="998" cy="92" r="5.28" fill="#9d7033" opacity="0.14" />
-      <circle cx="998" cy="92" r="2.2" fill="#3b3024" opacity="0.82" />
-    </g>
-    <g class="twinkle-b">
-      <circle cx="1050" cy="118" r="4.56" fill="#9d7033" opacity="0.14" />
-      <circle cx="1050" cy="118" r="1.9" fill="#3b3024" opacity="0.82" />
-    </g>
-    <g class="twinkle-a">
-      <circle cx="1100" cy="98" r="5.04" fill="#9d7033" opacity="0.14" />
-      <circle cx="1100" cy="98" r="2.1" fill="#3b3024" opacity="0.82" />
-    </g>
-    <g class="hero-star" transform="translate(1140, 138)">
-      <circle r="11" fill="url(#sparkHaloGrad)" opacity="0.58" />
-      <line x1="-11" y1="0" x2="11" y2="0" stroke="#b37b2c" stroke-width="0.7" opacity="0.78" />
-      <line x1="0" y1="-11" x2="0" y2="11" stroke="#b37b2c" stroke-width="0.7" opacity="0.78" />
-      <circle r="2.7" fill="#3b3024" />
-    </g>
-    <g class="twinkle-a">
-      <circle cx="1122" cy="198" r="4.8" fill="#9d7033" opacity="0.14" />
-      <circle cx="1122" cy="198" r="2" fill="#3b3024" opacity="0.82" />
-    </g>
-    <g class="twinkle-b">
-      <circle cx="1072" cy="234" r="4.32" fill="#9d7033" opacity="0.14" />
-      <circle cx="1072" cy="234" r="1.8" fill="#3b3024" opacity="0.82" />
-    </g>
-    <g class="twinkle-a">
-      <circle cx="1024" cy="212" r="4.8" fill="#9d7033" opacity="0.14" />
-      <circle cx="1024" cy="212" r="2" fill="#3b3024" opacity="0.82" />
-    </g>
-    </g>
-
-    <!-- 视觉中心：AxisEmblem3D 1:1 向量倒角圣环 + 旋转双层天球仪 -->
-    <g transform="translate(830, 170)">
-      <!-- 静止基准子午十字线 -->
-      <line x1="-156" y1="0" x2="156" y2="0" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-      <line x1="0" y1="-144" x2="0" y2="144" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-
-      <!-- 顺时针慢旋：天球仪刻度外环 -->
+    <!-- 右中 1:1 AxisEmblem3D + 天球仪 -->
+    <g transform="translate(834, 204)">
+      
+      <line x1="-141.04" y1="0" x2="141.04" y2="0" stroke="#966828" stroke-width="0.55" opacity="0.18"/>
+      <line x1="0" y1="-127.92" x2="0" y2="127.92" stroke="#966828" stroke-width="0.55" opacity="0.18"/>
       <g class="spin-cw">
-        <circle r="108" fill="none" stroke="#9d7033" stroke-width="0.7" opacity="0.34" />
-        <circle r="126" fill="none" stroke="#9d7033" stroke-width="0.55" stroke-dasharray="1.5 7.5" opacity="0.32" />
-        <line x1="99.5" y1="0" x2="113.5" y2="0" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="103.6" y1="9.06" x2="110.58" y2="9.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="102.42" y1="18.06" x2="109.31" y2="19.27" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="100.46" y1="26.92" x2="107.22" y2="28.73" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="97.73" y1="35.57" x2="104.31" y2="37.96" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="94.26" y1="43.95" x2="100.6" y2="46.91" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="86.17" y1="49.75" x2="98.29" y2="56.75" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="85.19" y1="59.65" x2="90.93" y2="63.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="79.67" y1="66.85" x2="85.03" y2="71.35" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="73.54" y1="73.54" x2="78.49" y2="78.49" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="66.85" y1="79.67" x2="71.35" y2="85.03" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="59.65" y1="85.19" x2="63.67" y2="90.93" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="49.75" y1="86.17" x2="56.75" y2="98.29" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="43.95" y1="94.26" x2="46.91" y2="100.6" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="35.57" y1="97.73" x2="37.96" y2="104.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="26.92" y1="100.46" x2="28.73" y2="107.22" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="18.06" y1="102.42" x2="19.27" y2="109.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="9.06" y1="103.6" x2="9.67" y2="110.58" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="0" y1="99.5" x2="0" y2="113.5" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="-9.06" y1="103.6" x2="-9.67" y2="110.58" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-18.06" y1="102.42" x2="-19.27" y2="109.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-26.92" y1="100.46" x2="-28.73" y2="107.22" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-35.57" y1="97.73" x2="-37.96" y2="104.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-43.95" y1="94.26" x2="-46.91" y2="100.6" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-49.75" y1="86.17" x2="-56.75" y2="98.29" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="-59.65" y1="85.19" x2="-63.67" y2="90.93" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-66.85" y1="79.67" x2="-71.35" y2="85.03" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-73.54" y1="73.54" x2="-78.49" y2="78.49" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-79.67" y1="66.85" x2="-85.03" y2="71.35" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-85.19" y1="59.65" x2="-90.93" y2="63.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-86.17" y1="49.75" x2="-98.29" y2="56.75" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="-94.26" y1="43.95" x2="-100.6" y2="46.91" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-97.73" y1="35.57" x2="-104.31" y2="37.96" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-100.46" y1="26.92" x2="-107.22" y2="28.73" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-102.42" y1="18.06" x2="-109.31" y2="19.27" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-103.6" y1="9.06" x2="-110.58" y2="9.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-99.5" y1="0" x2="-113.5" y2="0" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="-103.6" y1="-9.06" x2="-110.58" y2="-9.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-102.42" y1="-18.06" x2="-109.31" y2="-19.27" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-100.46" y1="-26.92" x2="-107.22" y2="-28.73" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-97.73" y1="-35.57" x2="-104.31" y2="-37.96" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-94.26" y1="-43.95" x2="-100.6" y2="-46.91" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-86.17" y1="-49.75" x2="-98.29" y2="-56.75" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="-85.19" y1="-59.65" x2="-90.93" y2="-63.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-79.67" y1="-66.85" x2="-85.03" y2="-71.35" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-73.54" y1="-73.54" x2="-78.49" y2="-78.49" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-66.85" y1="-79.67" x2="-71.35" y2="-85.03" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-59.65" y1="-85.19" x2="-63.67" y2="-90.93" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-49.75" y1="-86.17" x2="-56.75" y2="-98.29" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="-43.95" y1="-94.26" x2="-46.91" y2="-100.6" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-35.57" y1="-97.73" x2="-37.96" y2="-104.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-26.92" y1="-100.46" x2="-28.73" y2="-107.22" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-18.06" y1="-102.42" x2="-19.27" y2="-109.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="-9.06" y1="-103.6" x2="-9.67" y2="-110.58" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="0" y1="-99.5" x2="0" y2="-113.5" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="9.06" y1="-103.6" x2="9.67" y2="-110.58" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="18.06" y1="-102.42" x2="19.27" y2="-109.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="26.92" y1="-100.46" x2="28.73" y2="-107.22" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="35.57" y1="-97.73" x2="37.96" y2="-104.31" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="43.95" y1="-94.26" x2="46.91" y2="-100.6" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="49.75" y1="-86.17" x2="56.75" y2="-98.29" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="59.65" y1="-85.19" x2="63.67" y2="-90.93" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="66.85" y1="-79.67" x2="71.35" y2="-85.03" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="73.54" y1="-73.54" x2="78.49" y2="-78.49" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="79.67" y1="-66.85" x2="85.03" y2="-71.35" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="85.19" y1="-59.65" x2="90.93" y2="-63.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="86.17" y1="-49.75" x2="98.29" y2="-56.75" stroke="#9d7033" stroke-width="0.9" opacity="0.46" />
-        <line x1="94.26" y1="-43.95" x2="100.6" y2="-46.91" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="97.73" y1="-35.57" x2="104.31" y2="-37.96" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="100.46" y1="-26.92" x2="107.22" y2="-28.73" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="102.42" y1="-18.06" x2="109.31" y2="-19.27" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <line x1="103.6" y1="-9.06" x2="110.58" y2="-9.67" stroke="#9d7033" stroke-width="0.55" opacity="0.18" />
-        <!-- 轨道小星标 -->
-        <circle cx="108" cy="0" r="2.2" fill="#9d7033" opacity="0.82" />
-        <circle cx="-108" cy="0" r="1.5" fill="#5f7090" opacity="0.6" />
+        <circle r="104.96" fill="none" stroke="#966828" stroke-width="0.7" opacity="0.34"/>
+        <circle r="121.36" fill="none" stroke="#966828" stroke-width="0.55" stroke-dasharray="1.5 7.5" opacity="0.32"/>
+        <line x1="97.68" y1="0" x2="110.24" y2="0" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="101.12" y1="10.63" x2="107.65" y2="11.31" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="99.46" y1="21.14" x2="105.87" y2="22.5" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="96.7" y1="31.42" x2="102.94" y2="33.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="92.89" y1="41.36" x2="98.88" y2="44.03" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="84.59" y1="48.84" x2="95.47" y2="55.12" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="82.26" y1="59.77" x2="87.57" y2="63.62" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="75.56" y1="68.04" x2="80.44" y2="72.43" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="68.04" y1="75.56" x2="72.43" y2="80.44" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="59.77" y1="82.26" x2="63.62" y2="87.57" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="48.84" y1="84.59" x2="55.12" y2="95.47" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="41.36" y1="92.89" x2="44.03" y2="98.88" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="31.42" y1="96.7" x2="33.45" y2="102.94" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="21.14" y1="99.46" x2="22.5" y2="105.87" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="10.63" y1="101.12" x2="11.31" y2="107.65" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="0" y1="97.68" x2="0" y2="110.24" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-10.63" y1="101.12" x2="-11.31" y2="107.65" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-21.14" y1="99.46" x2="-22.5" y2="105.87" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-31.42" y1="96.7" x2="-33.45" y2="102.94" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-41.36" y1="92.89" x2="-44.03" y2="98.88" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-48.84" y1="84.59" x2="-55.12" y2="95.47" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-59.77" y1="82.26" x2="-63.62" y2="87.57" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-68.04" y1="75.56" x2="-72.43" y2="80.44" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-75.56" y1="68.04" x2="-80.44" y2="72.43" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-82.26" y1="59.77" x2="-87.57" y2="63.62" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-84.59" y1="48.84" x2="-95.47" y2="55.12" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-92.89" y1="41.36" x2="-98.88" y2="44.03" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-96.7" y1="31.42" x2="-102.94" y2="33.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-99.46" y1="21.14" x2="-105.87" y2="22.5" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-101.12" y1="10.63" x2="-107.65" y2="11.31" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-97.68" y1="0" x2="-110.24" y2="0" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-101.12" y1="-10.63" x2="-107.65" y2="-11.31" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-99.46" y1="-21.14" x2="-105.87" y2="-22.5" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-96.7" y1="-31.42" x2="-102.94" y2="-33.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-92.89" y1="-41.36" x2="-98.88" y2="-44.03" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-84.59" y1="-48.84" x2="-95.47" y2="-55.12" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-82.26" y1="-59.77" x2="-87.57" y2="-63.62" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-75.56" y1="-68.04" x2="-80.44" y2="-72.43" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-68.04" y1="-75.56" x2="-72.43" y2="-80.44" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-59.77" y1="-82.26" x2="-63.62" y2="-87.57" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-48.84" y1="-84.59" x2="-55.12" y2="-95.47" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="-41.36" y1="-92.89" x2="-44.03" y2="-98.88" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-31.42" y1="-96.7" x2="-33.45" y2="-102.94" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-21.14" y1="-99.46" x2="-22.5" y2="-105.87" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="-10.63" y1="-101.12" x2="-11.31" y2="-107.65" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="0" y1="-97.68" x2="0" y2="-110.24" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="10.63" y1="-101.12" x2="11.31" y2="-107.65" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="21.14" y1="-99.46" x2="22.5" y2="-105.87" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="31.42" y1="-96.7" x2="33.45" y2="-102.94" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="41.36" y1="-92.89" x2="44.03" y2="-98.88" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="48.84" y1="-84.59" x2="55.12" y2="-95.47" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="59.77" y1="-82.26" x2="63.62" y2="-87.57" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="68.04" y1="-75.56" x2="72.43" y2="-80.44" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="75.56" y1="-68.04" x2="80.44" y2="-72.43" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="82.26" y1="-59.77" x2="87.57" y2="-63.62" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="84.59" y1="-48.84" x2="95.47" y2="-55.12" stroke="#966828" stroke-width="0.9" opacity="0.46"/><line x1="92.89" y1="-41.36" x2="98.88" y2="-44.03" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="96.7" y1="-31.42" x2="102.94" y2="-33.45" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="99.46" y1="-21.14" x2="105.87" y2="-22.5" stroke="#966828" stroke-width="0.55" opacity="0.18"/><line x1="101.12" y1="-10.63" x2="107.65" y2="-11.31" stroke="#966828" stroke-width="0.55" opacity="0.18"/>
+        <circle cx="104.96" cy="0" r="2.2" fill="#966828" opacity="0.82"/>
       </g>
-
-      <!-- 逆时针慢旋：倾斜椭圆星轨环（呼应 AxisEmblem3D tiltedOrbitRing） -->
       <g transform="rotate(-24)">
         <g class="spin-ccw">
-          <ellipse rx="136" ry="52" fill="none" stroke="#5f7090" stroke-width="0.7" opacity="0.28" />
-          <ellipse rx="116" ry="92" fill="none" stroke="#9d7033" stroke-width="0.55" stroke-dasharray="28 14 4 14" opacity="0.28" />
-          <circle cx="136" cy="0" r="2.1" fill="#5b6c8c" opacity="0.78" />
+          <ellipse rx="129.56" ry="49.2" fill="none" stroke="#56698a" stroke-width="0.7" opacity="0.28"/>
+          <ellipse rx="111.52" ry="86.92" fill="none" stroke="#966828" stroke-width="0.55" stroke-dasharray="26 14 4 14" opacity="0.28"/>
+          <circle cx="129.56" cy="0" r="2.1" fill="#5b6c8c" opacity="0.78"/>
         </g>
       </g>
-
-      <!-- 1:1 Axis 圣环本体（带极克制呼吸微浮） -->
-      <g class="emblem-drift">
-        <!-- 四段倒角金属圣环弧 -->
-        <g fill="url(#arcMetalGrad)" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52">
-          <path d="M -14.84 -68.16 A 71.4 71.4 0 0 0 -42.97 -55.34 L -36.9 -47.29 A 61.32 61.32 0 0 1 -12.75 -58.3 Z" />
-          <path d="M 42.97 -55.34 A 71.4 71.4 0 0 0 14.84 -68.16 L 12.75 -58.3 A 61.32 61.32 0 0 1 36.9 -47.29 Z" />
-          <path d="M -61.2 -35.09 A 71.4 71.4 0 0 0 -14.84 71.52 L -12.75 61.66 A 61.32 61.32 0 0 1 -52.56 -29.9 Z" />
-          <path d="M 14.84 71.52 A 71.4 71.4 0 0 0 61.2 -35.09 L 52.56 -29.9 A 61.32 61.32 0 0 1 12.75 61.66 Z" />
+      <g class="drift">
+        <g fill="url(#h0-arc)" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52">
+          <path d="M -14.49 -66.54 A 69.7 69.7 0 0 0 -41.95 -54.02 L -36.02 -46.17 A 59.86 59.86 0 0 1 -12.45 -56.91 Z"/><path d="M 41.95 -54.02 A 69.7 69.7 0 0 0 14.49 -66.54 L 12.45 -56.91 A 59.86 59.86 0 0 1 36.02 -46.17 Z"/><path d="M -59.74 -34.26 A 69.7 69.7 0 0 0 -14.49 69.82 L -12.45 60.19 A 59.86 59.86 0 0 1 -51.31 -29.19 Z"/><path d="M 14.49 69.82 A 69.7 69.7 0 0 0 59.74 -34.26 L 51.31 -29.19 A 59.86 59.86 0 0 1 12.45 60.19 Z"/>
         </g>
-
-        <!-- 顶部香槟金棱冠（双面立体切分） -->
-        <path d="M 0 -86.52 L 0 -25.2 L -13.86 -57.96 Z" fill="#cfa96c" />
-        <path d="M 0 -86.52 L 13.86 -57.96 L 0 -25.2 Z" fill="#9c783f" />
-        <path d="M 0 -86.52 L 13.86 -57.96 L 0 -25.2 L -13.86 -57.96 Z" fill="none" stroke="#fff4dc" stroke-width="0.65" stroke-opacity="0.52" />
-
-        <!-- 左翼（双面立体切分） -->
-        <path d="M -0.84 -11.76 L -20.16 -41.16 L -90.72 -86.52 Z" fill="#7d664f" />
-        <path d="M -0.84 -11.76 L -90.72 -86.52 L -32.76 -26.04 Z" fill="#47392b" />
-        <path d="M -0.84 -11.76 L -20.16 -41.16 L -90.72 -86.52 L -32.76 -26.04 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52" />
-
-        <!-- 右翼（双面立体切分） -->
-        <path d="M 0.84 -11.76 L 90.72 -86.52 L 20.16 -41.16 Z" fill="#7d664f" />
-        <path d="M 0.84 -11.76 L 32.76 -26.04 L 90.72 -86.52 Z" fill="#47392b" />
-        <path d="M 0.84 -11.76 L 32.76 -26.04 L 90.72 -86.52 L 20.16 -41.16 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52" />
-
-        <!-- 底部中轴刃（双面立体切分） -->
-        <path d="M 0 -10.5 L 0 97.44 L -14.28 20.16 Z" fill="#7d664f" />
-        <path d="M 0 -10.5 L 14.28 20.16 L 0 97.44 Z" fill="#47392b" />
-        <path d="M 0 -10.5 L 14.28 20.16 L 0 97.44 L -14.28 20.16 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52" />
-
-        <!-- 三刃中心创世日蚀微核（Act III — Where Thought Ignites） -->
-        <g class="eclipse-core">
-          <circle cx="0" cy="-11.76" r="22" fill="url(#sparkHaloGrad)" />
-          <line x1="-18" y1="-11.76" x2="18" y2="-11.76" stroke="#fff9ea" stroke-width="0.8" opacity="0.82" filter="url(#softGlow)" />
-          <line x1="0" y1="-29.76" x2="0" y2="6.24" stroke="#fff9ea" stroke-width="0.8" opacity="0.82" filter="url(#softGlow)" />
-          <circle cx="0" cy="-11.76" r="2.6" fill="#fff9ea" filter="url(#softGlow)" />
+        <path d="M 0 -84.46 L 0 -24.6 L -13.53 -56.58 Z" fill="#cfa96c"/><path d="M 0 -84.46 L 13.53 -56.58 L 0 -24.6 Z" fill="#9c783f"/>
+        <path d="M 0 -84.46 L 13.53 -56.58 L 0 -24.6 L -13.53 -56.58 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <path d="M -0.82 -11.48 L -19.68 -40.18 L -88.56 -84.46 Z" fill="#7d664f"/><path d="M -0.82 -11.48 L -88.56 -84.46 L -31.98 -25.42 Z" fill="#47392b"/>
+        <path d="M -0.82 -11.48 L -19.68 -40.18 L -88.56 -84.46 L -31.98 -25.42 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <path d="M 0.82 -11.48 L 88.56 -84.46 L 19.68 -40.18 Z" fill="#7d664f"/><path d="M 0.82 -11.48 L 31.98 -25.42 L 88.56 -84.46 Z" fill="#47392b"/>
+        <path d="M 0.82 -11.48 L 31.98 -25.42 L 88.56 -84.46 L 19.68 -40.18 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <path d="M 0 -10.25 L 0 95.12 L -13.94 19.68 Z" fill="#7d664f"/><path d="M 0 -10.25 L 13.94 19.68 L 0 95.12 Z" fill="#47392b"/>
+        <path d="M 0 -10.25 L 13.94 19.68 L 0 95.12 L -13.94 19.68 Z" fill="none" stroke="#fff4dc" stroke-width="0.6" stroke-opacity="0.52"/>
+        <g class="pulse">
+          <circle cx="0" cy="-11.48" r="20.5" fill="url(#h0-spark)"/>
+          <line x1="-16.4" y1="-11.48" x2="16.4" y2="-11.48" stroke="#fff9ea" stroke-width="0.8" opacity="0.82"/>
+          <line x1="0" y1="-27.88" x2="0" y2="4.92" stroke="#fff9ea" stroke-width="0.8" opacity="0.82"/>
+          <circle cx="0" cy="-11.48" r="2.4" fill="#fff9ea"/>
         </g>
       </g>
     </g>
 
-    <!-- 左侧人文古典编辑排版区 -->
-    <g>
-      <!-- 顶部章节眉标（零中点、>=12px） -->
-      <text class="font-mono" x="62" y="64" font-size="12.5" letter-spacing="3.2" fill="#92662a">01 ORIGIN  /  05 COSMOS</text>
+    <!-- 左侧人文古典编辑排版 -->
+    <text class="mono" x="58" y="102" font-size="12.5" letter-spacing="3.0" fill="#966828">01 ORIGIN  /  05 COSMOS</text>
+    <text class="serif" x="55" y="184" font-size="78" letter-spacing="13" fill="#1b1611">AXIS</text>
+    <line x1="306" y1="132" x2="306" y2="184" stroke="#966828" stroke-width="1" opacity="0.45"/>
+    <text class="serif" x="330" y="180" font-size="48" font-style="italic" letter-spacing="2.2" fill="#7e531b">Star</text>
 
-      <!-- 主品牌与个人署名锁定：AXIS | Star -->
-      <text class="font-serif" x="59" y="146" font-size="74" letter-spacing="13" fill="#1b1611">AXIS</text>
-      <line x1="296" y1="98" x2="296" y2="146" stroke="rgba(146, 102, 42, 0.44)" stroke-width="1" />
-      <text class="font-serif" x="320" y="143" font-size="44" font-style="italic" letter-spacing="2.0" fill="#966524">Star</text>
-
-      <!-- 水平连接轴线（与维特鲁威圆心、圣环中心严格共线于 y=170） -->
-      <line x1="62" y1="170" x2="626" y2="170" stroke="url(#axisRuleGrad)" stroke-width="0.9" />
-      <g clip-path="url(#axisRuleClip)">
-        <rect class="meridian-glint" x="62" y="169.3" width="128" height="1.4" fill="url(#glintGrad)" />
-      </g>
-
-      <!-- 双语诗意主副标 -->
-      <text class="font-serif" x="62" y="210" font-size="23" font-style="italic" letter-spacing="0.7" fill="#443b30">From classical form to cosmic execution.</text>
-      <text class="font-cjk" x="62" y="240" font-size="14.5" letter-spacing="3.4" fill="#6e5c45">从古典艺术到宇宙星辰，从思考到实现</text>
-
-      <!-- 底部出版落款栏（全部 >=12px，无中点） -->
-      <text class="font-mono" x="62" y="294" font-size="12" letter-spacing="1.8" fill="#6f665a">
-        <tspan fill="#92662a">BY</tspan>
-        <tspan fill="#2c241b"> STAR</tspan>
-        <tspan dx="18" fill="rgba(146, 102, 42, 0.44)">|</tspan>
-        <tspan dx="18" fill="#92662a">PROJECT</tspan>
-        <tspan fill="#2c241b"> AXIS</tspan>
-        <tspan dx="18" fill="rgba(146, 102, 42, 0.44)">|</tspan>
-        <tspan dx="18">AGENT RUNTIME  /  WEBGL  /  SYSTEMS</tspan>
-      </text>
+    <line x1="58" y1="208" x2="606" y2="208" stroke="url(#h0-axis)" stroke-width="0.9"/>
+    <g clip-path="url(#h0-rule-clip)">
+      <rect class="glint" x="58" y="207.2" width="128" height="1.6" fill="url(#h0-glint)"/>
     </g>
 
-    <!-- 右上与右下极微天文坐标落款（全部 >=12px） -->
-    <text class="font-mono" x="1142" y="64" text-anchor="end" font-size="12" letter-spacing="2.2" fill="#667185" opacity="0.82">RA 04H 18M  /  DEC +31°</text>
-    <text class="font-mono" x="1142" y="294" text-anchor="end" font-size="12" letter-spacing="1.8" fill="#667185" opacity="0.82">SEVEN COORDINATES  /  MMXXVI</text>
+    <text class="serif" x="58" y="248" font-size="24" font-style="italic" letter-spacing="0.6" fill="#4a4035">From classical form to cosmic execution.</text>
+    <text class="cjk-hero" x="58" y="280" font-size="15" letter-spacing="3.2" fill="#73685a">从古典艺术到宇宙星辰，从思考到实现</text>
+
+    <!-- 底部宣言栏（参考 Chasen 底部双栏宣言节律，全按 Axis 语境定制） -->
+    <line x1="6" y1="342" x2="1194" y2="342" stroke="#e2d7c4" stroke-width="0.9"/>
+    <text class="sans" x="58" y="382" font-size="17" font-weight="600" fill="#1b1611">把思考锻造成可核验的系统与视觉体验。</text>
+    <text class="sans" x="58" y="408" font-size="13.5" fill="#73685a">独立开发者 Star，聚焦 Agent 运行时可靠性、Harness 工程、受控 Skill 演化与 WebGL 视觉表达。</text>
+
+    <text class="serif" x="1142" y="380" text-anchor="end" font-size="18" font-style="italic" fill="#4a4035">"Where thought ignites into verifiable form."</text>
+    <text class="mono" x="1142" y="408" text-anchor="end" font-size="12" letter-spacing="2.0" fill="#966828">AGENT RUNTIME  /  HARNESS  /  WEBGL  /  LUA</text>
   </g>
-
-  <!-- 馆藏版画细边框与四角对位十字 -->
-  <rect x="8.5" y="8.5" width="1183" height="323" rx="10" fill="none" stroke="rgba(138, 98, 44, 0.28)" stroke-width="0.9" />
-  <rect x="14.5" y="14.5" width="1171" height="311" rx="6" fill="none" stroke="rgba(31, 25, 19, 0.07)" stroke-width="0.6" />
-
-  <!-- 四角微细鎏金对位刻痕 -->
-  <g stroke="#9a6e32" stroke-width="0.9" opacity="0.68">
-    <path d="M 24 24 H 36 M 24 24 V 36" fill="none" />
-    <path d="M 1176 24 H 1164 M 1176 24 V 36" fill="none" />
-    <path d="M 24 316 H 36 M 24 316 V 304" fill="none" />
-    <path d="M 1176 316 H 1164 M 1176 316 V 304" fill="none" />
+  <rect x="6.5" y="6.5" width="1187" height="427" rx="8" fill="none" stroke="#cfbe9f" stroke-width="1.1"/>
+  <rect x="12" y="12" width="1176" height="416" rx="5" fill="none" stroke="rgba(27, 22, 17, 0.06)" stroke-width="0.6"/>
+  <g stroke="#966828" stroke-width="0.9" opacity="0.62" fill="none">
+    <path d="M 18 18 H 28 M 18 18 V 28"/>
+    <path d="M 1182 18 H 1172 M 1182 18 V 28"/>
+    <path d="M 18 422 H 28 M 18 422 V 412"/>
+    <path d="M 1182 422 H 1172 M 1182 422 V 412"/>
   </g>
 </svg>
